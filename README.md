@@ -61,9 +61,8 @@ npm run preview
 ## Contact
 
 - GitHub: https://github.com/Santhosh-0511
-- LinkedIn: https://www.linkedin.com/in/YOUR-LINKEDIN  (replace with your profile)
-- Email: YOUR_EMAIL@example.com
+- LinkedIn: https://www.linkedin.com/in/santhosh-palnati-b2b859327/
+- Email: santhoshpalnati11@gmail.com
 
 ---
 
-MIT © P Santhosh Sri Sai Ram
