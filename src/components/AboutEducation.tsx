@@ -70,95 +70,10 @@ export const AboutEducation: React.FC = () => {
               alignItems: 'start',
             }}
           >
-            {/* Left Column: Terminal Card & Quick Metric Grid */}
+            {/* Left Column: Terminal Card */}
             <div className="reveal-on-scroll delay-100" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {/* Interactive Terminal */}
               <InteractiveTerminal />
-
-              {/* 4-Stat Metric Grid */}
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(2, 1fr)',
-                  gap: '1rem',
-                }}
-              >
-                <div
-                  style={{
-                    padding: '1.25rem',
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(14, 20, 32, 0.75)',
-                    backdropFilter: 'blur(16px)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
-                    textAlign: 'center',
-                  }}
-                >
-                  <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.85rem', fontWeight: 800, color: '#38BDF8', lineHeight: 1.1 }}>
-                    7.92
-                  </div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#94A3B8', marginTop: '0.25rem' }}>
-                    Current GPA
-                  </div>
-                </div>
-
-                <div
-                  style={{
-                    padding: '1.25rem',
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(14, 20, 32, 0.75)',
-                    backdropFilter: 'blur(16px)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
-                    textAlign: 'center',
-                  }}
-                >
-                  <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.85rem', fontWeight: 800, color: '#F59E0B', lineHeight: 1.1 }}>
-                    900+
-                  </div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#94A3B8', marginTop: '0.25rem' }}>
-                    Problems Solved
-                  </div>
-                </div>
-
-                <div
-                  style={{
-                    padding: '1.25rem',
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(14, 20, 32, 0.75)',
-                    backdropFilter: 'blur(16px)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
-                    textAlign: 'center',
-                  }}
-                >
-                  <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.85rem', fontWeight: 800, color: '#6366F1', lineHeight: 1.1 }}>
-                    10+
-                  </div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#94A3B8', marginTop: '0.25rem' }}>
-                    Projects Shipped
-                  </div>
-                </div>
-
-                <div
-                  style={{
-                    padding: '1.25rem',
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(14, 20, 32, 0.75)',
-                    backdropFilter: 'blur(16px)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.3)',
-                    textAlign: 'center',
-                  }}
-                >
-                  <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.85rem', fontWeight: 800, color: '#10B981', lineHeight: 1.1 }}>
-                    15+
-                  </div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#94A3B8', marginTop: '0.25rem' }}>
-                    Tech Tooling
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Right Column: Narrative Journey */}
@@ -174,17 +89,14 @@ export const AboutEducation: React.FC = () => {
               }}
             >
               <p>
-                Hey, I'm <strong style={{ color: '#F8FAFC' }}>P Santhosh Sri Sai Ram</strong>,
-                a Computer Science undergraduate at{' '}
-                <strong style={{ color: '#38BDF8' }}>IIIT Lucknow</strong>. I enjoy building
-                AI-powered applications, scalable backend systems, and full-stack products
-                that solve practical problems.
+                I'm <strong style={{ color: '#F8FAFC' }}>P Santhosh Sri Sai Ram</strong>, a Computer Science undergraduate at{' '}
+                <strong style={{ color: '#38BDF8' }}>IIIT Lucknow</strong>. I specialize in building{' '}
+                <strong style={{ color: '#F8FAFC' }}>scalable backend systems</strong>,{' '}
+                <strong style={{ color: '#38BDF8' }}>AI-powered applications</strong>, and full-stack software that solve real-world challenges.
               </p>
 
               <p>
-                I am deeply interested in <strong style={{ color: '#F8FAFC' }}>
-                  competitive programming, backend engineering, and AI/ML</strong>. I am
-                currently a{' '}
+                Passionate about competitive programming and distributed systems, I am a{' '}
                 <a
                   href={PORTFOLIO_DATA.socials.leetcode}
                   target="_blank"
@@ -194,7 +106,7 @@ export const AboutEducation: React.FC = () => {
                 >
                   Knight on LeetCode
                 </a>{' '}
-                (Max rating: 1945) and a{' '}
+                (1945) and a{' '}
                 <a
                   href={PORTFOLIO_DATA.socials.codeforces}
                   target="_blank"
@@ -204,18 +116,9 @@ export const AboutEducation: React.FC = () => {
                 >
                   Specialist on Codeforces
                 </a>{' '}
-                (Max rating: 1425), with over{' '}
-                <strong style={{ color: '#10B981' }}>900+ algorithmic problems</strong>{' '}
-                solved across competitive programming platforms.
-              </p>
-
-              <p>
-                On the engineering side, I work with{' '}
-                <strong style={{ color: '#F8FAFC' }}>
-                  C++, Python, FastAPI, Flask, React, PostgreSQL, and modern AI/ML tools
-                </strong>
-                . I've built projects involving computer vision, LLMs, OCR, REST APIs,
-                real-time monitoring, and scalable backend systems, including{' '}
+                (1425) with over{' '}
+                <strong style={{ color: '#10B981' }}>900+ algorithmic problems solved</strong>. My primary stack includes{' '}
+                <strong style={{ color: '#F8FAFC' }}>C++, Python, FastAPI, React, and modern AI/ML</strong>, demonstrated in systems like{' '}
                 <a
                   href="https://road-sense-coral.vercel.app/"
                   target="_blank"
@@ -235,17 +138,6 @@ export const AboutEducation: React.FC = () => {
                 >
                   Medi Share
                 </a>.
-              </p>
-
-              <p>
-                Beyond technology, I am an active member of the{' '}
-                <strong style={{ color: '#F8FAFC' }}>Goonj Dramatics Society</strong> at
-                IIIT Lucknow, where I've mentored{' '}
-                <strong style={{ color: '#10B981' }}>150+ students</strong> and helped
-                organize theatre productions, cultural events, and inter-college
-                competitions. I'm always open to collaborating on interesting{' '}
-                <strong style={{ color: '#F8FAFC' }}>AI, backend, and software engineering
-                  projects</strong>.
               </p>
 
               <div style={{ marginTop: '0.5rem' }}>

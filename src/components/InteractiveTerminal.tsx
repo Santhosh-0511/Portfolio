@@ -43,11 +43,13 @@ export const InteractiveTerminal: React.FC = () => {
 
   const [commandHistory, setCommandHistory] = useState<string[]>(['whoami']);
   const [historyIndex, setHistoryIndex] = useState<number>(-1);
-  const terminalEndRef = useRef<HTMLDivElement>(null);
+  const outputAreaRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (outputAreaRef.current) {
+      outputAreaRef.current.scrollTop = outputAreaRef.current.scrollHeight;
+    }
   }, [history]);
 
   const executeCommand = (cmdStr: string) => {
@@ -419,6 +421,7 @@ export const InteractiveTerminal: React.FC = () => {
 
       {/* Terminal Output Area */}
       <div
+        ref={outputAreaRef}
         style={{
           flex: 1,
           padding: '1rem',
@@ -440,8 +443,6 @@ export const InteractiveTerminal: React.FC = () => {
             <div style={{ paddingLeft: '0.5rem' }}>{item.output}</div>
           </div>
         ))}
-
-        <div ref={terminalEndRef} />
       </div>
 
       {/* Terminal Input Line */}

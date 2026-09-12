@@ -172,7 +172,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCommandPalette }) => {
 
             {/* Resume Button */}
             <a
-              href="#contact"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="P_Santhosh_Resume.pdf"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',

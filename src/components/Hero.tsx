@@ -249,7 +249,10 @@ export const Hero: React.FC = () => {
 
             {/* Secondary Resume */}
             <a
-              href="mailto:santhoshpalnati11@gmail.com?subject=Resume%20Request%20-%20P%20Santhosh"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="P_Santhosh_Resume.pdf"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
