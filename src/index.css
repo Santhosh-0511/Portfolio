@@ -1,0 +1,219 @@
+/* ==========================================================================
+   CYBER-OBSIDIAN & ELECTRIC INDIGO / CYAN / EMERALD LUXE SYSTEM
+   Obsidian Canvas:      #080B11
+   Surface Slate:        #0E1420
+   Glass Card:           rgba(14, 20, 32, 0.78)
+   Card Hover:           rgba(20, 29, 46, 0.92)
+   Electric Indigo:      #6366F1
+   Cyber Cyan:           #06B6D4 / #38BDF8
+   Neon Emerald:         #10B981
+   Vibrant Crimson:      #F43F5E
+   Amber Gold:           #F59E0B
+   Pristine White Text:  #F8FAFC
+   Cool Slate Text:      #CBD5E1
+   Muted Text:           #94A3B8 / #64748B
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* BACKGROUND */
+  --bg-deep:       #080B11;
+  --bg-surface:    #0E1420;
+  --bg-card:       rgba(14, 20, 32, 0.78);
+  --bg-card-hover: rgba(20, 29, 46, 0.92);
+
+  /* BORDERS */
+  --border-subtle:    rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(99, 102, 241, 0.45);
+  --border-glow:      rgba(6, 182, 212, 0.45);
+
+  /* CYBER ACCENTS */
+  --indigo:  #6366F1;
+  --cyan:    #06B6D4;
+  --emerald: #10B981;
+  --crimson: #F43F5E;
+  --amber:   #F59E0B;
+
+  /* Aliases for backward compat */
+  --royal:        #6366F1;
+  --gold:         #F59E0B;
+  --navy:         #38BDF8;
+  --ocean:        #06B6D4;
+  --coral:        #F43F5E;
+  --sun:          #F59E0B;
+  --mint:         #10B981;
+  --choc:         #F43F5E;
+  --accent-blue:  #38BDF8;
+  --accent-cyan:  #06B6D4;
+  --accent-sand:  #F59E0B;
+  --accent-peach: #F43F5E;
+
+  /* TEXT — High-Contrast Clean White */
+  --text-primary:   #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted:     #94A3B8;
+
+  --font-sans:    'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  background-color: #080B11;
+  color: #F8FAFC;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #080B11;
+  position: relative;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #080B11; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6366F1, #06B6D4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: #38BDF8; }
+
+/* ── Background Grid ── */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(circle at 50% 30%, transparent 20%, #080B11 85%);
+}
+
+/* ── Typography ── */
+.font-heading { font-family: var(--font-heading); }
+.font-mono    { font-family: var(--font-mono); }
+
+/* ── Gradient Text ── */
+.gradient-text,
+.gradient-text-sapphire,
+.gradient-text-dual {
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #C084FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #06B6D4 0%, #38BDF8 50%, #6366F1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-sand {
+  background: linear-gradient(135deg, #F59E0B 0%, #F43F5E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-dual-split {
+  background: linear-gradient(135deg, #6366F1 50%, #06B6D4 50%);
+}
+
+/* ── Glass Panel ── */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5),
+              inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-highlight);
+  box-shadow: 0 15px 35px -10px rgba(99, 102, 241, 0.25),
+              inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* ── Glow Utils ── */
+.glow-blue-sm { box-shadow: 0 0 15px -3px rgba(99, 102, 241, 0.4); }
+.glow-blue-md { box-shadow: 0 0 25px -3px rgba(99, 102, 241, 0.5); }
+.glow-sand-sm { box-shadow: 0 0 20px -5px rgba(245, 158, 11, 0.4); }
+
+/* ── PROGRESSIVE GRADUAL SCROLL REVEAL ── */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-150 { transition-delay: 0.15s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-250 { transition-delay: 0.25s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-350 { transition-delay: 0.35s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* ── HERO STAGGERED ENTRANCE ANIMATIONS ── */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0.85;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-enter-1,
+.hero-enter-2,
+.hero-enter-3,
+.hero-enter-4,
+.hero-enter-5,
+.hero-enter-6 {
+  opacity: 1;
+  animation: heroFadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ── Animations ── */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 0.8; transform: scale(1.03); }
+}
+.animate-pulse-subtle { animation: pulse-subtle 4s ease-in-out infinite; }
+
+@keyframes scanline {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+.scanline-effect {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent,
+    rgba(99, 102, 241, 0.5), rgba(6, 182, 212, 0.5), transparent);
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+.text-center {
+  text-align: center;
+}
